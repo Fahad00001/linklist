@@ -58,7 +58,7 @@ export default function About() {
 
       {/* Call-to-Action Section */}
       <div className="mt-10 text-center">
-        <h3 className="text-xl font-medium mb-4">Start Using Lisklist Clone</h3>
+        <h3 className="text-xl font-medium mb-4">Start Using Lisklist</h3>
         <p className="mb-6">
           Build your own page, add your favorite links, and share it with your audience today!
         </p>
