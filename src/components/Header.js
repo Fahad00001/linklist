@@ -32,29 +32,44 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          <Link href="/about" className="text-gray-700 hover:text-blue-500 transition">
+          <Link
+            href="/about"
+            className="text-gray-700 hover:text-blue-500 transition"
+          >
             About
           </Link>
-          <Link href="/pricing" className="text-gray-700 hover:text-blue-500 transition">
+          <Link
+            href="/pricing"
+            className="text-gray-700 hover:text-blue-500 transition"
+          >
             Pricing
           </Link>
-          <Link href="/contact" className="text-gray-700 hover:text-blue-500 transition">
+          <Link
+            href="/contact"
+            className="text-gray-700 hover:text-blue-500 transition"
+          >
             Contact
           </Link>
           {!!session ? (
             <>
-              <Link href="/account" className="text-gray-700 hover:text-blue-500 transition">
+              <Link
+                href="/account"
+                className="text-gray-700 hover:text-blue-500 transition"
+              >
                 Hello, {session.name}
               </Link>
               <LogoutButton />
             </>
           ) : (
             <>
-              <Link href="/login" className="text-gray-700 hover:text-blue-500 transition">
+              <Link
+                href="/login"
+                className="text-gray-700 hover:text-blue-500 transition"
+              >
                 Sign In
               </Link>
               <Link
-                href="/register"
+                href="/login"
                 className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
               >
                 Create Account
