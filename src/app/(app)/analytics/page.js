@@ -3,6 +3,7 @@ import Chart from "@/components/Chart";
 import SectionBox from "@/components/layout/SectionBox";
 import { Event } from "@/models/Event";
 import { Page } from "@/models/Page";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mongoose from "mongoose";
 import { getServerSession } from "next-auth";
