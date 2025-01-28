@@ -3,29 +3,49 @@ import Chart from "@/components/Chart";
 import SectionBox from "@/components/layout/SectionBox";
 import { Event } from "@/models/Event";
 import { Page } from "@/models/Page";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { differenceInDays, formatISO9075, isToday } from "date-fns";
 import mongoose from "mongoose";
 import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
-import {
-  CartesianGrid,
-  Legend,
-  Line,
-  LineChart,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
 
 export default async function AnalyticsPage() {
   mongoose.connect(process.env.MONGO_URI);
   const session = await getServerSession(authOptions);
+
   if (!session) {
-    return redirect("/");
+    // Show message when the user is not logged in
+    return (
+      <div className="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-xl space-y-6">
+        <h2 className="text-2xl font-semibold text-center text-gray-800">
+          You are not logged in!
+        </h2>
+        <p className="text-center text-gray-600">
+          Please log in to view your analytics.
+        </p>
+        <a href="/auth/signin" className="block text-center mt-4 text-blue-500">
+          Log In
+        </a>
+      </div>
+    );
   }
+
   const page = await Page.findOne({ owner: session.user.email });
+
+  if (!page) {
+    // Show message when no page is found for the user
+    return (
+      <div className="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-xl space-y-6">
+        <h2 className="text-2xl font-semibold text-center text-gray-800">
+          No Page Found
+        </h2>
+        <p className="text-center text-gray-600">
+          It seems like you haven't selected a username. Start by creating one to
+          see analytics here.
+        </p>
+        <a href="/account" className="block text-center mt-4 text-blue-500">
+          Select username
+        </a>
+      </div>
+    );
+  }
 
   const groupedViews = await Event.aggregate([
     {
@@ -86,7 +106,7 @@ export default async function AnalyticsPage() {
               <a
                 className="text-xs text-blue-400"
                 target="_blank"
-                href="link.url"
+                href={link.url}
               >
                 {link.url}
               </a>
