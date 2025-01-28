@@ -39,7 +39,7 @@ export default async function AnalyticsPage() {
           No Page Found
         </h2>
         <p className="text-center text-gray-600">
-          It seems like you haven't selected a username. Start a creating one to
+          It seems like you haven&#39;t selected a username. Start a creating one to
           see analytics here.
         </p>
         <a href="/account" className="block text-center mt-4 text-blue-500">
