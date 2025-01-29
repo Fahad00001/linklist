@@ -9,7 +9,7 @@ export default function About() {
           About <span className="text-yellow-300">LinkList </span>
         </h1>
         <p className="text-lg max-w-2xl mx-auto leading-relaxed">
-          Our Lisklist clone is designed to help individuals and businesses create a simple, elegant
+          Our Lisklit is designed to help individuals and businesses create a simple, elegant
           way to share multiple links in one place. Whether you’re an influencer, entrepreneur, or
           creator, this tool empowers you to showcase your online presence effectively.
         </p>
@@ -21,7 +21,7 @@ export default function About() {
         <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-semibold mb-4">What It Does</h2>
           <p className="mb-4">
-            This Lisklist clone provides users with a customizable landing page where they can:
+            This Lisklist provides users with a customizable landing page where they can:
           </p>
           <ul className="space-y-2">
             <li className="flex items-center">

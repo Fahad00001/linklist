@@ -64,16 +64,16 @@ export default function Header() {
             <>
               <Link
                 href="/login"
-                className="text-gray-700 hover:text-blue-500 transition"
+                   className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
               >
                 Sign In
               </Link>
-              <Link
+              {/* <Link
                 href="/login"
                 className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
               >
                 Create Account
-              </Link>
+              </Link> */}
             </>
           )}
         </nav>
@@ -145,13 +145,13 @@ export default function Header() {
                 >
                   Sign In
                 </Link>
-                <Link
+                {/* <Link
                   href="/login"
                   className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Create Account
-                </Link>
+                </Link> */}
               </>
             )}
           </nav>
