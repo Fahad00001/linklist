@@ -180,6 +180,7 @@ export default function HeroForm({ user }) {
             </div>
           )}
         </div>
+        
 
         {/* Helper Text */}
         <p className="text-sm text-gray-500">
@@ -245,6 +246,10 @@ export default function HeroForm({ user }) {
           <span>{error}</span>
         </div>
       )}
+
+     
     </form>
+
+   
   );
 }

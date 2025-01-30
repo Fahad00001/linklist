@@ -1,6 +1,7 @@
 // pages/contact.js
 
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -81,11 +82,60 @@ export default function Contact() {
             </button>
           </form>
         </div>
+        <footer className="mt-8 w-1/2 mx-auto bg-gray-900 text-gray-300 p-6 rounded-lg text-center transition-all duration-500 ease-in-out hover:bg-gray-800 hover:scale-105">
+  <p className="text-lg font-semibold animate-fadeIn">Get in Touch</p>
+  <div className="mt-2 animate-fadeIn">
+    <p>
+      Email: {" "}
+      <a
+        href="mailto:fahadtec2002@gmail.com"
+        className="text-blue-400 hover:underline"
+      >
+        fahadtec2002@gmail.com
+      </a>
+    </p>
+    <p>
+      Phone: {" "}
+      <a
+        href="tel:9650943783"
+        className="text-blue-400 hover:underline"
+      >
+        9650943783
+      </a>
+    </p>
+  </div>
+  <div className="mt-4 animate-fadeIn">
+    <p className="text-sm">Follow us on social media:</p>
+    <div className="flex justify-center space-x-4 mt-2">
+      <a
+        href="https://github.com/Fahad00001"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-400 hover:underline transition-transform transform hover:scale-110"
+      >
+        Github
+      </a>
+      <a
+        href="https://www.linkedin.com/in/fahad-iqbal-8209a8248/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-400 hover:underline transition-transform transform hover:scale-110"
+      >
+        LinkedIn
+      </a>
+      <a
+        href="https://www.instagram.com/its_fahad_iqbal/?next=%2F"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-400 hover:underline transition-transform transform hover:scale-110"
+      >
+        Instagram
+      </a>
+    </div>
+  </div>
+</footer>
 
-        <footer className="mt-8 text-sm text-gray-200">
-          <p>Or reach us through:</p>
-          <p>Email: support@example.com | Phone: (123) 456-7890</p>
-        </footer>
+
       </div>
     </>
   );
