@@ -20,7 +20,7 @@ export default async function Home() {
            {/* Features Section */}
            <section className="container mx-auto px-4 py-24">
         <div className="grid md:grid-cols-3 gap-8">
-          {["Social Links", "Bio & Contact", "Media Gallery"].map((feature, index) => (
+          {["Social Links", "Bio & Contact", "Projects"].map((feature, index) => (
             <div 
               key={feature}
               className="p-6 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 hover:scale-105 transition-transform duration-300 shadow-xl animate-pulse"

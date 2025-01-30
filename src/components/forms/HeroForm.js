@@ -248,4 +248,3 @@ export default function HeroForm({ user }) {
     </form>
   );
 }
-
